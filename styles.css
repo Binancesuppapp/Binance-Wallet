@@ -1,0 +1,221 @@
+/* تنظیمات اولیه */
+body {
+    background-color: #1b1b1c;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+.logo-container {
+    text-align: center; /* مرکز کردن لوگو */
+    margin-bottom: 4px; /* فاصله از عنوان */
+}
+
+.logo {
+    width: 320px; /* عرض لوگو */
+    height: auto; /* حفظ نسبت ابعادی */
+}
+
+
+
+h1 {
+    font-size: 24px;
+    color: azure;
+    margin-bottom: 20px;
+}
+
+h2{
+    font-size: 15px;
+    color: #7e8997;
+}
+
+h3{
+    font-size: 15px;
+    color: #7e8997;
+}
+
+#seedForm {
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    
+    
+    
+}
+
+.column {
+    color: #80998b;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+.input-group {
+    position: relative; /* افزودن موقعیت نسبی برای قرار دادن برچسب به صورت مطلق */
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label {
+    position: absolute; /* موقعیت مطلق برای قرار دادن برچسب داخل کادر ورودی */
+    left: 10px; /* فاصله از سمت چپ کادر ورودی */
+    top: 50%; /* مرکز عمودی */
+    transform: translateY(-50%); /* تنظیم دقیق مرکزیت */
+    pointer-events: none; /* جلوگیری از تداخل کلیک با برچسب */
+    color: #808a99; /* رنگ متن برچسب */
+    font-weight: bold; /* ضخامت فونت برچسب */
+    background-color: transparent; /* شفاف بودن پس‌زمینه برچسب */
+}
+
+input[type="text"] {
+    color: beige;
+    font-style: normal;
+    background-color: #2b3139;
+    border: none;
+    border-radius: 7px;
+    width: 180px;
+    padding: 10px;
+    padding-left: 35px; /* افزودن فضای خالی برای برچسب */
+    box-sizing: border-box; /* اطمینان از محاسبه صحیح padding */
+}
+
+.button-container {
+    background-color: #69ffa6;
+    display: flex;
+    justify-content: center; /* مرکز قرار دادن دکمه */
+    margin-top: 20px;
+    border-radius: 9px;
+}
+
+button {
+    padding: 15px 30px; /* تغییر اندازه دکمه */
+    font-size: 18px;    /* تغییر اندازه متن دکمه */
+    cursor: pointer;
+    background-color: #69ffa6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #69ffa6;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        margin-top: 20px; /* کاهش فاصله از بالا */
+    }
+
+    h1 {
+        font-size: 20px; /* کاهش اندازه متن */
+    }
+
+    h2, h3 {
+        font-size: 14px; /* کاهش اندازه متن */
+    }
+
+    #seedForm {
+        margin-top: 10px; /* کاهش فاصله از بالا */
+    }
+
+    .container {
+        flex-direction: column; /* تغییر جهت ستون‌ها به عمودی */
+    }
+
+    .column {
+        margin: 10px 0; /* ایجاد فاصله عمودی بین ستون‌ها */
+    }
+
+    input[type="text"] {
+        width: 100%; /* تنظیم عرض به 100% */
+        max-width: 300px; /* محدود کردن حداکثر عرض */
+    }
+
+    .button-container {
+        margin-top: 10px; /* کاهش فاصله از بالا */
+    }
+
+    button {
+        width: 100%; /* تنظیم دکمه به عرض 100% */
+    }
+}
+
+
+
+
+.toggle-container {
+    margin-bottom: 20px; /* فاصله از فرم */
+    text-align: center; /* مرکز کردن دکمه */
+}
+
+#toggleWords {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #2b3139;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+
+
+/* قالب اصلی */
+.main-container {
+    background-color: #1b1b1c;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    max-width: 600px; /* عرض اولیه برای 12 کلمه */
+    border: 2px solid #474d57; /* اضافه کردن خط سفید */
+}
+
+
+/* خطوط بالای قالب */
+.header-lines {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.line {
+    height: 3px;
+    background-color: #32cd32; /* رنگ سبز خطوط */
+    flex: 1;
+    margin: 0 5px;
+}
+
+/* تغییر عرض خطوط برای قالب بزرگ‌تر */
+.main-container.large .line {
+    height: 4px; /* ضخامت بیشتر */
+}
+
+/* قالب فرم */
+h3 {
+    font-size: 15px;
+    color: #7e8997;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
